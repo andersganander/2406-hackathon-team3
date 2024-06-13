@@ -10,6 +10,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <style>
       .parallax-container {
@@ -20,15 +21,24 @@
   <body>
     <!-- Menu -->
     <nav>
-      <div class="nav-wrapper teal">
-        <a href="#" class="brand-logo">StressLess</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="#facts">Stress Factss</a></li>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">Logo</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+          <i class="material-icons">menu</i> <!-- Hamburger icon -->
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#facts">Stress Facts</a></li>
           <li><a href="#assessment">Self Assessment</a></li>
           <li><a href="#tips">Stress Management Tips</a></li>
         </ul>
       </div>
     </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="#facts">Stress Facts</a></li>
+      <li><a href="#assessment">Self Assessment</a></li>
+      <li><a href="#tips">Stress Management Tips</a></li>
+    </ul>
 
     <!-- First background image -->
     <div class="parallax-container">
@@ -148,6 +158,31 @@
         </p>
       </div>
     </div>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Footer Content</h5>
+            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Tips 1</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Tips 2</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Tips 3</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Tips 4</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container center-align">
+        © 2024 June Hackathon Team 3
+
+        </div>
+      </div>
+    </footer>
 
     <!-- JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

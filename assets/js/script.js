@@ -56,6 +56,14 @@ const scores = {
   "Family and Relations": 0
 };
 
+const choice_texts = {
+  1: "Strongly disagree",
+  2: "Disagree",
+  3: "Neutral",
+  4: "Agree",
+  5: "Strongly agree"
+}
+
 let currentCategoryIndex = 0;
 let currentQuestionIndex = 0;
 const questionsPerPage = 4;
@@ -65,6 +73,8 @@ document.addEventListener('DOMContentLoaded', function() {
   var instances = M.Parallax.init(elems);
   var sidenav = document.querySelectorAll('.sidenav');
   M.Sidenav.init(sidenav);
+  var array_of_dom_elements = document.querySelectorAll("input[type=range]");
+  M.Range.init(array_of_dom_elements);
   M.AutoInit();
   showQuestions();
 
@@ -88,8 +98,9 @@ function showQuestions() {
       questionDiv.innerHTML = `
           <span class="question-number">${i + 1}.</span>
           <label>${categoryQuestions[i]}</label>
+          <p id="choice_${i}">${choice_texts[3]}</p>
           <p class="range-field">
-              <input type="range" id="q${i}" min="1" max="5" />
+              <input type="range" id="q${i}" onchange=updateChoiceText(this,${i}) min="1" max="5" />
           </p>
       `;
       questionForm.appendChild(questionDiv);
@@ -97,6 +108,27 @@ function showQuestions() {
 }
 
 function nextQuestions() {
+  // Update scores for current category
+  // categories.forEach((category, index) => {
+  //     scores[category] += parseInt(document.getElementById(`q${index}`) ? document.getElementById(`q${index}`).value : 0);
+  //     console.log(`${category}: ${scores[category]}`);
+  // });
+
+  // log current category
+  console.log(categories[currentCategoryIndex]);
+  console.log('Before '+scores[categories[currentCategoryIndex]]);
+
+  // sum all values of all questions
+  let totalScore = 0;
+  for (let i = 0; i < questions[categories[currentCategoryIndex]].length; i++) {
+      const score = parseInt(document.getElementById(`q${i}`) ? document.getElementById(`q${i}`).value : 0);
+      console.log(`q${i}: ${score}`);
+      totalScore += score;git
+  }
+  console.log('Total: '+totalScore);
+  scores[categories[currentCategoryIndex]] += totalScore;
+  console.log('After '+scores[categories[currentCategoryIndex]]);
+
   currentQuestionIndex += questionsPerPage;
   if (currentQuestionIndex >= questions[categories[currentCategoryIndex]].length) {
       currentQuestionIndex = 0;
@@ -114,18 +146,31 @@ function showSummary() {
   const summaryText = document.getElementById('summary-text');
   summaryText.innerHTML = '';
 
-  categories.forEach(category => {
-      let totalScore = 0;
-      for (let i = 0; i < questions[category].length; i++) {
-          const score = parseInt(document.getElementById(`q${i}`) ? document.getElementById(`q${i}`).value : 0);
-          totalScore += score;
-      }
-      summaryText.innerHTML += `<p><strong>${category}:</strong> ${totalScore}</p>`;
-  });
+  // categories.forEach(category => {
+  //     let totalScore = 0;
+  //     for (let i = 0; i < questions[category].length; i++) {
+  //         const score = parseInt(document.getElementById(`q${i}`) ? document.getElementById(`q${i}`).value : 0);
+
+  //         totalScore += score;
+  //     }
+  //     summaryText.innerHTML += `<p><strong>${category}:</strong> ${totalScore}</p>`;
+  // });
+
+  // iterate scores object
+  for (const [key, value] of Object.entries(scores)) {
+    summaryText.innerHTML += `<p><strong>${key}:</strong> ${value}</p>`;
+  }
+
+  // summaryText.innerHTML += `<p><strong>Total:</strong> ${Object.values(scores).reduce((a, b) => a + b, 0)}</p>`;
+
 
   document.getElementById('question-form').classList.add('hidden');
   document.getElementById('next-button').classList.add('hidden');
   summary.classList.remove('hidden');
+}
+
+function updateChoiceText(event, qid) {
+  document.getElementById("choice_"+qid).innerText = choice_texts[event.value];
 }
 
 

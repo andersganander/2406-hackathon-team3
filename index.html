@@ -21,7 +21,7 @@
   <body>
     <!-- Menu -->
     <nav>
-      <div class="nav-wrapper">
+      <div class="nav-wrapper teal">
         <a href="#!" class="brand-logo">Logo</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger">
           <i class="material-icons">menu</i> <!-- Hamburger icon -->
@@ -137,10 +137,26 @@
     <!-- Self Assessment Section -->
     <div class="section lime lighten-5" id="assessment">
       <div class="row container">
-        <h2 class="header">Self Assessment</h2>
+        <div class="col s6">
         <!-- Self assessments components -->
+          <div class="question-container">
+            <h4 class="center-align" id="category-heading"></h4>
+            <div id="question-form">
+              
+            </div>
+            <div class="center-align">
+                <button class="btn waves-effect waves-light" id="next-button" onclick="nextQuestions()">Next</button>
+            </div>
+            <div class="center-align hidden" id="summary">
+                <h5>Summary</h5>
+                <p id="summary-text"></p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
+   
 
     <!-- Third background image -->
     <div class="parallax-container">
@@ -158,7 +174,7 @@
         </p>
       </div>
     </div>
-    <footer class="page-footer">
+    <footer class="page-footer teal">
       <div class="container">
         <div class="row">
           <div class="col l6 s12">

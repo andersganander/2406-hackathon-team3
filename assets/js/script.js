@@ -73,9 +73,9 @@ document.addEventListener('DOMContentLoaded', function() {
   var instances = M.Parallax.init(elems);
   var sidenav = document.querySelectorAll('.sidenav');
   M.Sidenav.init(sidenav);
-  var array_of_dom_elements = document.querySelectorAll("input[type=range]");
-  M.Range.init(array_of_dom_elements);
-  M.AutoInit();
+  // var array_of_dom_elements = document.querySelectorAll("input[type=range]");
+  // M.Range.init(array_of_dom_elements);
+  // M.AutoInit();
   showQuestions();
 
 });
@@ -146,22 +146,40 @@ function showSummary() {
   const summaryText = document.getElementById('summary-text');
   summaryText.innerHTML = '';
 
-  // categories.forEach(category => {
-  //     let totalScore = 0;
-  //     for (let i = 0; i < questions[category].length; i++) {
-  //         const score = parseInt(document.getElementById(`q${i}`) ? document.getElementById(`q${i}`).value : 0);
+const getEmoji = (score) => {
+    if (score < 5) {
+      return { emoji: '😞', color: 'red lighten-2', emojiClass: 'emoji', text: 'This should be a focus area ❤️' };
+    } else if (score < 8) {
+      return { emoji: '😐', color: 'yellow lighten-2', emojiClass: 'emoji', text: 'Almost there, keep pushing! 💪🏻' };
+    } else {
+      return { emoji: '😊', color: 'green lighten-2', emojiClass: 'emoji', text: 'No stress baby!! ⭐' };
+    }
+  };
 
-  //         totalScore += score;
-  //     }
-  //     summaryText.innerHTML += `<p><strong>${category}:</strong> ${totalScore}</p>`;
-  // });
-
-  // iterate scores object
+  // Re-write
+  //categories.forEach(category => {
   for (const [key, value] of Object.entries(scores)) {
-    summaryText.innerHTML += `<p><strong>${key}:</strong> ${value}</p>`;
-  }
+    // let totalScore = 0;
+    // questions[category].forEach((qIndex) => {
+    //   const score = parseInt(document.getElementById(`q${qIndex}`).value);
+    //   totalScore += score;
+    // });
 
-  // summaryText.innerHTML += `<p><strong>Total:</strong> ${Object.values(scores).reduce((a, b) => a + b, 0)}</p>`;
+    const { emoji, color, emojiClass, text } = getEmoji(value);
+    summaryText.innerHTML += `
+      <div class=“card ${color}“>
+        <div class=“card-content”>
+          <span class=“card-title”><strong>${key}:</strong> <span class=“${emojiClass}“>${emoji}</span> ${value}</span>
+          <p>${text}</p>
+        </div>
+      </div>
+    `;
+  };
+
+     // iterate scores object
+    //  for (const [key, value] of Object.entries(scores)) {
+    //   summaryText.innerHTML += `<p><strong>${key}:</strong> ${value}</p>`;
+    // }
 
 
   document.getElementById('question-form').classList.add('hidden');

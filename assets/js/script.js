@@ -87,7 +87,7 @@ function showQuestions() {
       questionDiv.className = 'question';
       questionDiv.innerHTML = `
           <span class="question-number">${i + 1}.</span>
-          <label>${categoryQuestions[i]}</label>
+          <label class="questions">${categoryQuestions[i]}</label>
           <p class="range-field">
               <input type="range" id="q${i}" min="1" max="5" />
           </p>

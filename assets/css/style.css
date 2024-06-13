@@ -46,6 +46,23 @@
     padding: 2rem;
 }
 
+.questions {
+    font-size: 1.5rem;
+}
+
+.next-btn {
+    background-color: var(--green);
+}
+
+input[type="range"] {
+    color: var(--green);
+}
+
+.next-btn:hover {
+    background-color: var(--grey);
+    transform: scale(1.05);
+}
+
 .parallax-container {
     height: 400px;
   }

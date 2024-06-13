@@ -123,7 +123,7 @@ function nextQuestions() {
   for (let i = 0; i < questions[categories[currentCategoryIndex]].length; i++) {
       const score = parseInt(document.getElementById(`q${i}`) ? document.getElementById(`q${i}`).value : 0);
       console.log(`q${i}: ${score}`);
-      totalScore += score;git
+      totalScore += score;
   }
   console.log('Total: '+totalScore);
   scores[categories[currentCategoryIndex]] += totalScore;

@@ -97,7 +97,7 @@ function showQuestions() {
       questionDiv.className = 'question';
       questionDiv.innerHTML = `
           <span class="question-number">${i + 1}.</span>
-          <label>${categoryQuestions[i]}</label>
+          <label class="questions">${categoryQuestions[i]}</label>
           <p id="choice_${i}">${choice_texts[3]}</p>
           <p class="range-field">
               <input type="range" id="q${i}" onchange=updateChoiceText(this,${i}) min="1" max="5" />

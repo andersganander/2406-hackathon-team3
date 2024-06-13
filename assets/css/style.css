@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+:root {
+    /* Fonts */
+    --main-font: 'Quicksand', 'serif';
+
+    /* Colors */
+    --background: #F7F5F2;
+    --grey: #606062;
+    --black: #373737;
+    --logo: #164A5F;
+    --green: #5C665B;
+}
+
+/* Header */
+
+.nav-wrapper {
+    background-color: var(--background);
+}
+
+.menu-text li a {
+    color: var(--grey);
+    margin-right: 2rem;
+}
+
+.logo {
+    width: 18rem;
+    height: auto;
+    margin-left: 2rem;
+    margin-top: .65rem;
+}
+
+.solid-background {
+    background-color: var(--background);
+}
+
+.card-position {
+    margin: 2rem;
+    padding: 2rem;
+}
+
+.card-image {
+    width: 20rem;
+    height: auto;
+    margin: auto;
+    padding: 2rem;
+}
+
+.questions {
+    font-size: 1.5rem;
+}
+
+.next-btn {
+    background-color: var(--green);
+}
+
+input[type="range"] {
+    color: var(--green);
+}
+
+.next-btn:hover {
+    background-color: var(--grey);
+    transform: scale(1.05);
+}
+
+.parallax-container {
+    height: 400px;
+  }

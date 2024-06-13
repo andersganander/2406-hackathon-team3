@@ -97,6 +97,27 @@ function showQuestions() {
 }
 
 function nextQuestions() {
+  // Update scores for current category
+  // categories.forEach((category, index) => {
+  //     scores[category] += parseInt(document.getElementById(`q${index}`) ? document.getElementById(`q${index}`).value : 0);
+  //     console.log(`${category}: ${scores[category]}`);
+  // });
+
+  // log current category
+  console.log(categories[currentCategoryIndex]);
+  console.log('Before '+scores[categories[currentCategoryIndex]]);
+
+  // sum all values of all questions
+  let totalScore = 0;
+  for (let i = 0; i < questions[categories[currentCategoryIndex]].length; i++) {
+      const score = parseInt(document.getElementById(`q${i}`) ? document.getElementById(`q${i}`).value : 0);
+      console.log(`q${i}: ${score}`);
+      totalScore += score;
+  }
+  console.log('Total: '+totalScore);
+  scores[categories[currentCategoryIndex]] += totalScore;
+  console.log('After '+scores[categories[currentCategoryIndex]]);
+
   currentQuestionIndex += questionsPerPage;
   if (currentQuestionIndex >= questions[categories[currentCategoryIndex]].length) {
       currentQuestionIndex = 0;
@@ -114,14 +135,23 @@ function showSummary() {
   const summaryText = document.getElementById('summary-text');
   summaryText.innerHTML = '';
 
-  categories.forEach(category => {
-      let totalScore = 0;
-      for (let i = 0; i < questions[category].length; i++) {
-          const score = parseInt(document.getElementById(`q${i}`) ? document.getElementById(`q${i}`).value : 0);
-          totalScore += score;
-      }
-      summaryText.innerHTML += `<p><strong>${category}:</strong> ${totalScore}</p>`;
-  });
+  // categories.forEach(category => {
+  //     let totalScore = 0;
+  //     for (let i = 0; i < questions[category].length; i++) {
+  //         const score = parseInt(document.getElementById(`q${i}`) ? document.getElementById(`q${i}`).value : 0);
+
+  //         totalScore += score;
+  //     }
+  //     summaryText.innerHTML += `<p><strong>${category}:</strong> ${totalScore}</p>`;
+  // });
+
+  // iterate scores object
+  for (const [key, value] of Object.entries(scores)) {
+    summaryText.innerHTML += `<p><strong>${key}:</strong> ${value}</p>`;
+  }
+
+  // summaryText.innerHTML += `<p><strong>Total:</strong> ${Object.values(scores).reduce((a, b) => a + b, 0)}</p>`;
+
 
   document.getElementById('question-form').classList.add('hidden');
   document.getElementById('next-button').classList.add('hidden');

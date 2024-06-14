@@ -155,6 +155,16 @@ input[type="range"]::-webkit-slider-thumb {
     color: var(--grey);
 }
 
+/* styles for result cards*/
+.tips_inactive {
+    display: none;
+}
+
+.tips_active {
+    display: block;
+}
+
+
 
 /* Footer */
 

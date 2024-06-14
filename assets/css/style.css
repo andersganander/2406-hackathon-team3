@@ -89,3 +89,11 @@ input[type="range"] {
 .emoji {
     font-size: 3rem;
   }
+
+.result_card {
+    display: none;
+}
+
+.result.active {
+    display: block;
+}

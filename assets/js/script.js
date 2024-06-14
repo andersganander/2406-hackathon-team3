@@ -147,12 +147,12 @@ function showSummary() {
   summaryText.innerHTML = '';
 
 const getEmoji = (score) => {
-    if (score < 5) {
-      return { emoji: '😞', color: 'red lighten-2', emojiClass: 'emoji', text: 'This should be a focus area ❤️' };
-    } else if (score < 8) {
+    if (score <= 16 ) {
+      return { emoji: '😊', color: 'green lighten-2', emojiClass: 'emoji', text: 'No stress baby!! ⭐' };
+    } else if (score <= 28) {
       return { emoji: '😐', color: 'yellow lighten-2', emojiClass: 'emoji', text: 'Almost there, keep pushing! 💪🏻' };
     } else {
-      return { emoji: '😊', color: 'green lighten-2', emojiClass: 'emoji', text: 'No stress baby!! ⭐' };
+      return { emoji: '😞', color: 'red lighten-2', emojiClass: 'emoji', text: 'This should be a focus area ❤️' };
     }
   };
 
@@ -167,14 +167,17 @@ const getEmoji = (score) => {
 
     const { emoji, color, emojiClass, text } = getEmoji(value);
     summaryText.innerHTML += `
-      <div class=“card ${color}“>
-        <div class=“card-content”>
-          <span class=“card-title”><strong>${key}:</strong> <span class=“${emojiClass}“>${emoji}</span> ${value}</span>
+      <div class="card ${color}">
+        <div class="card-content">
+          <span class="card-title"><strong>${key}:</strong> <span class="${emojiClass}">${emoji}</span> ${value}</span>
           <p>${text}</p>
         </div>
       </div>
     `;
   };
+  
+  
+
 
      // iterate scores object
     //  for (const [key, value] of Object.entries(scores)) {
@@ -184,6 +187,7 @@ const getEmoji = (score) => {
 
   document.getElementById('question-form').classList.add('hidden');
   document.getElementById('next-button').classList.add('hidden');
+  document.getElementById('category-heading').classList.add('hidden');
   summary.classList.remove('hidden');
 }
 

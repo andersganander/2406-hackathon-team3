@@ -66,3 +66,26 @@ input[type="range"] {
 .parallax-container {
     height: 400px;
   }
+
+  /* .question-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+} */
+.question-number {
+    font-weight: bold;
+}
+.hidden {
+    display: none;
+}
+.center-align {
+    text-align: center;
+}
+.emoji {
+    font-size: 3rem;
+  }

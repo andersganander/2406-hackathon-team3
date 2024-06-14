@@ -12,6 +12,10 @@
     --green: #5C665B;
 }
 
+body {
+    font-family: var(--main-font);
+}
+
 /* Header */
 
 .nav-wrapper {
@@ -34,6 +38,46 @@
     background-color: var(--background);
 }
 
+/* Main */
+
+.text-1 h2 {
+    font-size: 1.5rem;
+    color: var(--background);
+    text-align: center;
+    padding: 0;
+    margin: .2rem;
+}
+
+.text-1 {
+    margin-top: 25%;
+    padding: 1rem;
+}
+
+.text-2 h2 {
+    font-size: 1.5rem;
+    color: var(--background);
+    margin-top: 70%;
+    margin-left: 50%;
+}
+
+.text-3 h2 {
+    font-size: 1.5rem;
+    color: var(--background);
+    text-align: center;
+    padding: 0;
+    margin-top: 12rem;
+    margin-left: 10%;
+}
+
+.text-4 h2 {
+    font-size: 1.5rem;
+    color: var(--background);
+    text-align: center;
+    padding: 0;
+    margin-top: 18rem;
+    margin-right: 10%;
+}
+
 .card-position {
     margin: 2rem;
     padding: 2rem;
@@ -54,8 +98,10 @@
     background-color: var(--green);
 }
 
-input[type="range"] {
-    color: var(--green);
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: var(--green);
 }
 
 .next-btn:hover {
@@ -80,12 +126,15 @@ input[type="range"] {
 .question-number {
     font-weight: bold;
 }
+
 .hidden {
     display: none;
 }
+
 .center-align {
     text-align: center;
 }
+
 .emoji {
     font-size: 3rem;
   }
@@ -98,17 +147,85 @@ input[type="range"] {
 }
 
 .active_category {
-    color: orange;
+    color: var(--logo);
+    font-weight: 800;
 }
 
 .category_header {
     color: var(--grey);
 }
 
-.result_card {
-    display: none;
+
+/* Footer */
+
+.footer-text {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1rem;
+    font-weight: 500;
 }
 
-.result.active {
-    display: block;
+.footer-text p {
+    margin-left: 30%;
+}
+
+.logo-bw {
+    width: 9rem;
+    margin-left: 30%;
+}
+
+@media screen and (min-width: 767px) {
+
+    .text-1 h2 {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+    
+    .text-1 {
+        margin-top: 5rem;
+        padding: 1.2rem;
+    }
+    
+    .text-2 h2 {
+        font-size: 1.5rem;
+    }
+
+    .text-2 {
+        margin-top: -18rem;
+    }
+
+    .text-3 h2 {
+        margin-left: 60%;
+    }
+
+    .logo-bw {
+        width: 17rem;
+        margin-left: 5%;
+    }
+
+    .footer-text {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    
+    .footer-text:hover {
+        font-weight: 700;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+    .text-1 h2 {
+        font-size: 2rem;
+    }
+    
+    .text-2 h2 {
+        font-size: 2rem;
+    }
+
+    .text-2 {
+        margin-top: -60%;
+    }
+
+
 }

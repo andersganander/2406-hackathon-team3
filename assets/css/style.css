@@ -104,3 +104,11 @@ input[type="range"] {
 .category_header {
     color: var(--grey);
 }
+
+.result_card {
+    display: none;
+}
+
+.result.active {
+    display: block;
+}

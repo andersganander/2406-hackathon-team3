@@ -67,6 +67,7 @@ const choice_texts = {
 let currentCategoryIndex = 0;
 let currentQuestionIndex = 0;
 const questionsPerPage = 4;
+let changedCategoryIndex = false;
 
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.parallax');
@@ -116,7 +117,15 @@ function nextQuestions() {
 
   // log current category
   console.log(categories[currentCategoryIndex]);
-  console.log('Before '+scores[categories[currentCategoryIndex]]);
+  console.log(currentCategoryIndex);
+  console.log(changedCategoryIndex);
+
+ 
+
+  // change class to active for category header
+  const categoryHeader = document.getElementById(`category-${currentCategoryIndex}`);
+  //categoryHeader.classList.remove('active');
+  //categoryHeader.classList.add('active');
 
   // sum all values of all questions
   let totalScore = 0;
@@ -131,12 +140,23 @@ function nextQuestions() {
 
   currentQuestionIndex += questionsPerPage;
   if (currentQuestionIndex >= questions[categories[currentCategoryIndex]].length) {
-      currentQuestionIndex = 0;
-      currentCategoryIndex++;
+    currentQuestionIndex = 0;
+    currentCategoryIndex++;
+    changedCategoryIndex = true;
+      
   }
   if (currentCategoryIndex >= categories.length) {
       showSummary();
   } else {
+    if (currentCategoryIndex < categories.length && changedCategoryIndex) {
+      const currentCategoryHeader = document.getElementById(`category_${currentCategoryIndex}`);
+      const previousCategoryHeader = document.getElementById(`category_${currentCategoryIndex-1}`);
+      currentCategoryHeader.classList.add('active_category');
+      currentCategoryHeader.classList.remove('category_header');
+      previousCategoryHeader.classList.remove('active_category');
+      previousCategoryHeader.classList.add('category_header');
+      changedCategoryIndex = false;
+    }
       showQuestions();
   }
 }

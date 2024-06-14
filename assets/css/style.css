@@ -90,10 +90,17 @@ input[type="range"] {
     font-size: 3rem;
   }
 
-.result_card {
-    display: none;
+#header_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.result.active {
-    display: block;
+.active_category {
+    color: orange;
+}
+
+.category_header {
+    color: var(--grey);
 }

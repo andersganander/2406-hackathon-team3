@@ -174,11 +174,11 @@ function showSummary() {
 
 const getEmoji = (score) => {
     if (score <= 16 ) {
-      return { emoji: '😊', color: 'green lighten-2', emojiClass: 'emoji', text: 'No stress baby!! ⭐' };
+      return { emoji: '😊', color: 'light-green lighten-2', emojiClass: 'emoji', text: 'No stress baby!! ⭐' };
     } else if (score <= 28) {
-      return { emoji: '😐', color: 'yellow lighten-2', emojiClass: 'emoji', text: 'Almost there, keep pushing! 💪🏻' };
+      return { emoji: '😐', color: 'amber lighten-4', emojiClass: 'emoji', text: 'Almost there, keep pushing! 💪🏻' };
     } else {
-      return { emoji: '😞', color: 'red lighten-2', emojiClass: 'emoji', text: 'This should be a focus area ❤️' };
+      return { emoji: '😞', color: 'red lighten-4', emojiClass: 'emoji', text: 'This should be a focus area ❤️' };
     }
   };
 

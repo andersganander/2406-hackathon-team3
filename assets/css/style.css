@@ -105,10 +105,11 @@ input[type="range"] {
     color: var(--grey);
 }
 
-.result_card {
+/* styles for resutl cards*/
+.tips_inactive {
     display: none;
 }
 
-.result.active {
+.tips_active {
     display: block;
 }

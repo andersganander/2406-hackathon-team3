@@ -206,11 +206,61 @@
 
     <!-- Stress Management Tips Section -->
     <div class="section solid-background" id="tips">
-      <div class="row container">
+      <div class="row card_position">
         <h2 class="header">Stress Management Tips</h2>
 
         <!-- Tips -->
-          <div class="col s12 m6 offset-m2">
+          <div id="tips_1" class="col s12 m6 tips_active">
+          <div class="card">
+            <div class="card-image">
+              <img
+                class="activator"
+                src="./assets/images/learn-about-stress.png"
+              />
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"
+                >Learn more about stress<i class="material-icons right">expand_less</i></span
+              >
+              <p >Understanding Stress
+
+                Stress is a response that begins in the mind, shaped by our reactions to external situations
+                and our capacity to manage these reactions.
+                Mental stress, in particular, arises from how we perceive expectations and demands
+                and our ability to cope with them.
+                </p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4"
+                >Details about stress<i class="material-icons right">close</i></span
+              >
+              <p>Stress can be both beneficial and detrimental.<br>
+                Experiencing both positive and negative stress is a normal part of life.<br>
+                Positive stress can be beneficial, helping to boost productivity and provide stimulation, <br>
+                preventing boredom and isolation.<br>
+                Nonetheless, it is crucial to ensure periods of recovery and rest, even with positive stress.<br>
+                Without proper rest, the body may exhibit physical symptoms as a reaction to sustained stress.<br>
+                Stress factors come from different factors, such as:
+                <li>Work-related pressures</li>
+               <li>Financial problems</li>
+                <li>Major life changes</li>
+                <li>Relationship issues</li>
+                <li>Social media and technology</li></p>
+
+                <p>You can also experience stress from:
+
+                <li>Personal attitudes</li>
+                <li>Beliefs</li>
+                <li>Expectations</li>
+                <li>Perceptions</li>
+
+                As you see, there are things you can practice and process with your internal factors to help you handle stress.<br>
+                By understanding the different facets of stress,
+                you can create effective management strategies and navigate stress to maintain your overall well-being.</p>
+            </div>
+          </div>
+        </div>
+        <div id="tips_2" class="col s12 m6 tips_active">
           <div class="card">
             <div class="card-image">
               <img
@@ -262,7 +312,7 @@
         </div>
 
         <!-- First tips section-->
-        <div id="work_tips" class="col s12 m6 result_card">
+        <div id="work_tips" class="col s12 m6 tips_inactive">
           <div class="card">
             <div class="card-image">
               <img
@@ -272,10 +322,10 @@
             </div>
             <div class="card-content">
               <span class="card-title activator grey-text text-darken-4"
-                >Work and Education<i class="material-icons right">expand_less</i></span
-              >
+                >Work and Education<i class="material-icons right">expand_less</i></span>
               <p >Click the arrow to get 4 tips on how to manage stress in the workplace and education.
                 </p>
+                <br><br>
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4"
@@ -317,7 +367,7 @@
         </div>
 
         <!-- Second tips section -->
-        <div id="health_tips" class="col s12 m6 result_card">
+        <div id="health_tips" class="col s12 m6 tips_inactive">
           <div class="card">
             <div class="card-image">
               <img
@@ -327,44 +377,51 @@
             </div>
             <div class="card-content">
               <span class="card-title activator grey-text text-darken-4"
-                >Health<i class="material-icons right">expand_less</i></span
-              >
+                >Health<i class="material-icons right">expand_less</i></span>
               <p >Click the arrow to get 4 tips on how to manage stress regarding health
                 </p>
+                <br><br>
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4"
-                >Details about stress<i class="material-icons right">close</i></span
+                >Health Tips<i class="material-icons right">close</i></span
               >
-              <p>Stress can be both beneficial and detrimental.<br>
-                Experiencing both positive and negative stress is a normal part of life.<br>
-                Positive stress can be beneficial, helping to boost productivity and provide stimulation, <br>
-                preventing boredom and isolation.<br>
-                Nonetheless, it is crucial to ensure periods of recovery and rest, even with positive stress.<br>
-                Without proper rest, the body may exhibit physical symptoms as a reaction to sustained stress.<br>
-                Stress factors come from different factors, such as:
-                <li>Work-related pressures</li>
-               <li>Financial problems</li>
-                <li>Major life changes</li>
-                <li>Relationship issues</li>
-                <li>Social media and technology</li></p>
-
-                <p>You can also experience stress from:
-
-                <li>Personal attitudes</li>
-                <li>Beliefs</li>
-                <li>Expectations</li>
-                <li>Perceptions</li>
-
-                As you see, there are things you can practice and process with your internal factors to help you handle stress.<br>
-                By understanding the different facets of stress,
-                you can create effective management strategies and navigate stress to maintain your overall well-being.</p>
-            </div>
+              <ol>
+                <li>
+                  <strong>Physical Activity:</strong>
+                  <ul>
+                    <li>Incorporate regular exercise into your routine to help reduce stress.</li>
+                    <li>Even short walks or stretches can make a big difference.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Healthy Eating:</strong>
+                  <ul>
+                    <li>Maintain a balanced diet with plenty of fruits and vegetables.</li>
+                    <li>Avoid excessive caffeine and sugar, which can increase anxiety.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Sleep:</strong>
+                  <ul>
+                    <li>Aim for 7-9 hours of sleep per night.</li>
+                    <li>Establish a consistent sleep schedule and create a relaxing bedtime routine.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Medical Support:</strong>
+                  <ul>
+                    <li>Schedule regular check-ups with your healthcare provider.</li>
+                    <li>If you have chronic conditions, follow your treatment plan and discuss any concerns with your doctor.</li>
+                  </ul>
+                </li>
+              </ol>
           </div>
         </div>
+      </div>
 
         <!-- Third tips section -->
-        <div id="social_tips" class="col s12 m6 result_card">
+        <div id="social_tips" class="col s12 m6 tips_inactive">
           <div class="card">
             <div class="card-image">
               <img
@@ -374,49 +431,51 @@
             </div>
             <div class="card-content">
               <span class="card-title activator grey-text text-darken-4"
-                >Learn more about stress<i class="material-icons right">expand_less</i></span
-              >
-              <p >Understanding Stress
-
-                Stress is a response that begins in the mind, shaped by our reactions to external situations
-                and our capacity to manage these reactions.
-                Mental stress, in particular, arises from how we perceive expectations and demands
-                and our ability to cope with them.
+                >Social Media and Technology<i class="material-icons right">expand_less</i></span>
+              <p >Click the arrow to get 4 tips on how to manage stress regarding Social Media and Technology
                 </p>
+                <br><br>
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4"
-                >Details about stress<i class="material-icons right">close</i></span
+                >Social Media Tips<i class="material-icons right">close</i></span
               >
-              <p>Stress can be both beneficial and detrimental.<br>
-                Experiencing both positive and negative stress is a normal part of life.<br>
-                Positive stress can be beneficial, helping to boost productivity and provide stimulation, <br>
-                preventing boredom and isolation.<br>
-                Nonetheless, it is crucial to ensure periods of recovery and rest, even with positive stress.<br>
-                Without proper rest, the body may exhibit physical symptoms as a reaction to sustained stress.<br>
-                Stress factors come from different factors, such as:
-                <li>Work-related pressures</li>
-               <li>Financial problems</li>
-                <li>Major life changes</li>
-                <li>Relationship issues</li>
-                <li>Social media and technology</li></p>
-
-                <p>You can also experience stress from:
-
-                <li>Personal attitudes</li>
-                <li>Beliefs</li>
-                <li>Expectations</li>
-                <li>Perceptions</li>
-
-                As you see, there are things you can practice and process with your internal factors to help you handle stress.<br>
-                By understanding the different facets of stress,
-                you can create effective management strategies and navigate stress to maintain your overall well-being.</p>
+              <ol>
+                <li>
+                  <strong>Digital Detox:</strong>
+                  <ul>
+                    <li>Take regular breaks from social media and digital devices.</li>
+                    <li>Set specific times of the day to check your social media accounts.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Privacy and Security:</strong>
+                  <ul>
+                    <li>Review your privacy settings on social media platforms to control who can see your information.</li>
+                    <li>Be mindful of what you share online to avoid potential stress from privacy breaches.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Healthy Usage:</strong>
+                  <ul>
+                    <li>Limit your screen time and avoid using devices before bedtime.</li>
+                    <li>Engage in offline activities that you enjoy, such as reading, hobbies, or outdoor activities.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Positive Interactions:</strong>
+                  <ul>
+                    <li>Follow accounts that inspire and uplift you, and unfollow those that cause stress or negativity.</li>
+                    <li>Be mindful of cyberbullying and report any inappropriate behavior.</li>
+                  </ul>
+                </li>
+              </ol>
             </div>
           </div>
         </div>
 
         <!-- Fourth tips section -->
-        <div id="family_tips" class="col s12 m6 result_card">
+        <div id="family_tips" class="col s12 m6 tips_inactive">
           <div class="card">
             <div class="card-image">
               <img
@@ -426,7 +485,7 @@
             </div>
             <div class="card-content">
               <span class="card-title activator grey-text text-darken-4"
-                >Learn more about stress<i class="material-icons right">expand_less</i></span
+                >Family and Realations<i class="material-icons right">expand_less</i></span
               >
               <p >Understanding Stress
 
@@ -438,37 +497,44 @@
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4"
-                >Details about stress<i class="material-icons right">close</i></span
+                >Family and Relations<i class="material-icons right">close</i></span
               >
-              <p>Stress can be both beneficial and detrimental.<br>
-                Experiencing both positive and negative stress is a normal part of life.<br>
-                Positive stress can be beneficial, helping to boost productivity and provide stimulation, <br>
-                preventing boredom and isolation.<br>
-                Nonetheless, it is crucial to ensure periods of recovery and rest, even with positive stress.<br>
-                Without proper rest, the body may exhibit physical symptoms as a reaction to sustained stress.<br>
-                Stress factors come from different factors, such as:
-                <li>Work-related pressures</li>
-               <li>Financial problems</li>
-                <li>Major life changes</li>
-                <li>Relationship issues</li>
-                <li>Social media and technology</li></p>
-
-                <p>You can also experience stress from:
-
-                <li>Personal attitudes</li>
-                <li>Beliefs</li>
-                <li>Expectations</li>
-                <li>Perceptions</li>
-
-                As you see, there are things you can practice and process with your internal factors to help you handle stress.<br>
-                By understanding the different facets of stress,
-                you can create effective management strategies and navigate stress to maintain your overall well-being.</p>
-            </div>
+              <ol>
+                <li>
+                  <strong>Communication:</strong>
+                  <ul>
+                    <li>Practice open and honest communication with family members.</li>
+                    <li>Set aside time to talk about any issues or concerns in a calm and respectful manner.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Support Systems:</strong>
+                  <ul>
+                    <li>Build a strong support network of friends and family.</li>
+                    <li>Don’t hesitate to seek professional help if family dynamics are causing significant stress.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Boundaries:</strong>
+                  <ul>
+                    <li>Set healthy boundaries with family members to protect your personal space and mental health.</li>
+                    <li>Learn to say no when necessary to avoid overcommitting yourself.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Quality Time:</strong>
+                  <ul>
+                    <li>Spend quality time with family members doing activities you all enjoy.</li>
+                    <li>Create positive memories and strengthen your bonds through shared experiences.</li>
+                  </ul>
+                </li>
+              </ol>
           </div>
         </div>
 
+
       </div>
-    </div>
+
 
     <!-- Fourth background image -->
     <div class="parallax-container">

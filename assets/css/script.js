@@ -1,3 +1,4 @@
+
 const categories = [
   "Work and Education",
   "Health",
@@ -53,13 +54,6 @@ const scores = {
   "Health": 0,
   "Social Media and Technology": 0,
   "Family and Relations": 0
-};
-
-const card_category = {
-  "Work and Education": "work_tips",
-  "Health": "health_tips",
-  "Social Media and Technology": "social_tips",
-  "Family and Relations": "family_tips"
 };
 
 const choice_texts = {
@@ -126,7 +120,7 @@ function nextQuestions() {
   console.log(currentCategoryIndex);
   console.log(changedCategoryIndex);
 
-
+ 
 
   // change class to active for category header
   const categoryHeader = document.getElementById(`category-${currentCategoryIndex}`);
@@ -149,7 +143,7 @@ function nextQuestions() {
     currentQuestionIndex = 0;
     currentCategoryIndex++;
     changedCategoryIndex = true;
-
+      
   }
   if (currentCategoryIndex >= categories.length) {
       showSummary();
@@ -201,8 +195,8 @@ const getEmoji = (score) => {
       </div>
     `;
   };
-
-
+  
+  
 
 
      // iterate scores object
@@ -215,22 +209,6 @@ const getEmoji = (score) => {
   document.getElementById('next-button').classList.add('hidden');
   document.getElementById('category-heading').classList.add('hidden');
   summary.classList.remove('hidden');
-  document.getElementById('tips_1').classList.remove('tips_active');
-  document.getElementById('tips_2').classList.remove('tips_active');
-  document.getElementById('tips_1').classList.add('tips_inactive');
-  document.getElementById('tips_2').classList.add('tips_inactive');
-  category_list = getTopTwoCategoryNames(scores);
-  const category1 = document.getElementById(card_category[category_list[0]]);
-  const category2 = document.getElementById(card_category[category_list[1]]);
-  category1.classList.remove('tips_inactive');
-  category1.classList.add('tips_active');
-  category2.classList.remove('tips_inactive');
-  category2.classList.add('tips_active');
-  console.log(card_category[category_list[0]]);
-  console.log(card_category[category_list[1]]);
-
-  console.log(getTopTwoCategoryNames(scores))
-
 }
 
 function updateChoiceText(event, qid) {
@@ -241,17 +219,18 @@ function getTopTwoCategoryNames(scores) {
   let items = Object.entries(scores);
 
   items.sort(function(a, b) {
-      return b[1] - a[1];
+      return b[1] - a[1]; 
   });
 
   let topTwo = items.slice(0, 2);
 
   let topTwoCategoryNames = topTwo.map(function(item) {
-      return item[0];
+      return item[0]; 
   });
 
-  return topTwoCategoryNames;
+  return topTwoCategoryNames; 
 }
+
 
 
 

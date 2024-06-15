@@ -1,114 +1,148 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome Anders Ganander,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **May 28, 2024**
+![image](https://github.com/Christina5P/2406-hackathon-team3/assets/160019695/885d765a-1d52-4161-9a35-9245bff667b5)
 
-## Gitpod Reminders
 
+![image](https://github.com/Christina5P/2406-hackathon-team3/assets/160019695/425a593d-5cdf-4e8c-96cc-a6b8e701f594)
+
+
+Welcome to the StressGuide App from Team StressLess
+Live link: https://andersganander.github.io/2406-hackathon-team3/
+StressGuide is an app designed to help individuals manage the common human problem of stress. <br>
+Our goal is to provide you with valuable information about stress, allow you to assess your own stress levels,<br>
+and offer advice on how to manage stress effectively. Additionally, we provide links to further resources to help you improve your well-being.
+We aim to create a site that is understandable and easy to navigate.
+
+![image](https://github.com/Christina5P/2406-hackathon-team3/assets/160019695/95ed1f99-be31-4aa3-b1a7-08261c944a3d)
+
+![test2](https://github.com/Christina5P/2406-hackathon-team3/assets/160019695/e95eb551-5477-44a4-ab99-9c9391987ec0)
+# Contents
+
+## Features
+We start with two information cards that provide basic information on what stress is and how it can affect you.<br>
+Next, we offer a stress assessment tool to help you reflect on your stress levels across four different categories. <br>
+This tool helps you identify areas where you might need to improve your stress management,<br>
+emphasizing the importance of maintaining a good balance in your life.
+
+### Stress facts
+The Stress Facts section in the Stress Management Application is designed to educate users about stress and its impact.<br>
+This section provides foundational knowledge that helps users understand what stress is, its causes, and its effects on both mental and physical health. <br>
+By presenting clear and concise information, the section aims to raise awareness and promote better stress management practices.<br>
+
+![image](https://github.com/Christina5P/2406-hackathon-team3/assets/160019695/b7246772-4122-42fb-aff1-2818f7e05fff)
+
+![image](https://github.com/Christina5P/2406-hackathon-team3/assets/160019695/2f53ad56-0a35-40ce-9062-867c0f0522bc)
+
+#### Key Features:
+1. Educational Content:
+The section presents basic, essential facts about stress in an easy-to-understand format. It covers definitions, common causes, and the physical and psychological effects of stress.
+2. Fact Cards:
+The information is organized into two visually appealing fact cards. Each card focuses on a different aspect of stress, ensuring that users receive a comprehensive overview without feeling overwhelmed.
+3. Visual Appeal:
+The fact cards are designed with user engagement in mind, using attractive layouts, colors, and icons to make the information more accessible and memorable.
+
+### Self assessment
+The stress assessment feature in the Stress Management Application is designed to help users evaluate their stress levels across various aspects of their lives. It provides a structured way to identify areas that may be contributing to their overall stress and offers insights into how to manage and reduce stress effectively.
+
+#### Key Features:
+1. Categories of Assessment:
+The assessment is divided into four main categories, each addressing different aspects of life:
+   * Work and Education: Evaluates stress related to workload, job security, work-life balance, and career progression.
+   * Health: Assesses stress due to physical health issues, chronic conditions, and maintaining a healthy lifestyle.
+   * Social Media and Technology: Looks at stress related to the use of social media, online presence, and digital connectivity.
+   * Family and Relations: Focuses on stress arising from family responsibilities, relationships, and communication within the family.
+2. Questionnaire Format:
+  * Each category contains 8 questions, making a total of 32 questions.
+  * The questions are presented 4 at a time to avoid overwhelming the user and to ensure focused responses.
+  * Users rate each statement on a scale from 1 to 5:
+    * 1 - Strongly Disagree
+    * 2 - Disagree
+    * 3 - Neutral
+    * 4 - Agree
+    * 5 - Strongly Agree
+3. User Interface:
+    * The questions are displayed in a column in the center of the page, occupying one-third of the width to ensure readability and focus.
+    * Above the questions, there is a heading that shows the current category being assessed.
+    * Each question is numbered, and the total number of questions in the category is displayed for context.
+4. Navigation:
+    * A "Next" button is provided to navigate through the questions. Once the user has answered the first 4 questions, clicking "Next" will display the next set of questions.
+    * This process continues until all questions in all categories have been answered.
+5. Summary and Results:
+    * After completing all questions, a summary page is displayed.
+    * The summary shows the total score for each category, helping users identify which areas of their life are causing the most stress.
+    * This insight allows users to focus on specific areas for stress management and improvement.
+    * After the survey has been completed and the user's stress profile has been displayed, the tips section is customized to show tips for the two categories where the user has the highest stress scores.
+
+![test1](https://github.com/Christina5P/2406-hackathon-team3/assets/160019695/d979efdf-5008-48b3-8ac8-4df2341acafd)
+
+## Design
+Our design is calm and smooth to help you slow down and avoid information overload.
+The icons visualize the theme, and the assessment uses a clean slider instead of numerical grades.
+Further down, we provide general tips, and personalized advice based on your assessment results.
+## Test
+
+![image](https://github.com/Christina5P/2406-hackathon-team3/assets/160019695/b1f9b092-d282-4549-9f4e-4bafbcff96a2)
+
+## Technologies
+Technologies used in this project:
+- HTML
+- CSS
+- Materialize
+- Java Script
+- Github - Save the project in a repository, use the canban for user stories
+
+## Deployment
+ a team, we worked on the same project by forking the repository to our own GitHub accounts.<br>
+ We made changes and committed them back to GitHub using the following commands in the codespace terminal:
+Git add . <br>
+Git commit -m"text" <br>
+Git push <br>
 To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+python3 -m http.server
 
-`python3 -m http.server`
+### We have deployed the project in Github.
+The project is deployed on GitHub. Here are the steps to deploy on GitHub:
+Navigate to the repository.
+1. Click the "Settings" tab above the repository.
+2. Select "Pages" in the left-hand menu.
+3. In the "Build and Deployment" section, select "Deploy from a branch."
+4. Choose "main" in the first dropdown and "root" in the second.
+5. Save your settings.
+You can find the public site under GitHub Pages in the "Deployments" section on the right-hand menu.
 
-A blue button should appear to click: _Make Public_,
+![image](https://github.com/Christina5P/2406-hackathon-team3/assets/160019695/9c82300c-ff7a-4f74-8274-b1dfeb777c83)
 
-Another blue button should appear to click: _Open Browser_.
+![image](https://github.com/Christina5P/2406-hackathon-team3/assets/160019695/802f73cd-4b7f-43dc-a50a-8c204d89cba6)
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+### How to Fork
+To fork this repository, click the "Fork" button at the top right corner of the main repository page.
+On the "Create a Fork" page, you can change the name of the repo if desired.
+Check the box if you want to copy the main branch or multiple branches (main is selected by default). Then, create the fork.
 
-A blue button should appear to click: _Make Public_,
+ ### How to Clone (An alternative to fork)
+To clone the repository, you create a copy in your repository (with all files and history). <br>
+This creates a remote link to the original repo, allowing you to work in your copy and push changes back to the original.<br>
+Open your repo and click the green "Code" button on the right-hand side. The easiest way is to open it with GitHub Desktop.<br>
+You can read more information on cloning at the GitHub : https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
 
-Another blue button should appear to click: _Open Browser_.
+## Source reference
+- https://materializecss.com
+- https://pixabay.com/photos
+- https://favicon.io/
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## Acknowledgement
+For inspiration for this project:
+- experience from stress course in Sweden
+- took part in KEDS test (a common used stresstest from medical researcher in Karoliniska Institute)
+- https://dinpsykiskahalsa.se/artiklar/nar-livet-kanns-jobbigt/stress/
+- Litteratur "Tid att leva : ett tioveckors program för stresshantering med ACT och medveten närvaro"
+Author: Fredrik Livheim, Daniel Ek, Björn Hedensjö
 
-To log into the Heroku toolbelt CLI:
+## Footer
+The footer contains information about our team, who built this app, and links to useful resources for stress management.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**May 28 2024:** Fix Mongo and Links installs
-
-**April 26 2024:** Update node version to 16
-
-**September 20 2023:** Update Python version to 3.9.17.
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+### Links to more information .
+- Read more about stress: https://www.helpguide.org/articles/stress/stress-management.htm
+- Learn more about CBT: https://www.youtube.com/watch?v=Jz55Uk9EH6U
+- Beginners guide to mindfulness: https://mindfulness.com/mindful-living/mindfulness-a-beginners-guide

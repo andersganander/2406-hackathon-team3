@@ -155,17 +155,6 @@ input[type="range"]::-webkit-slider-thumb {
     color: var(--grey);
 }
 
-/* styles for result cards*/
-.tips_inactive {
-    display: none;
-}
-
-.tips_active {
-    display: block;
-}
-
-
-
 /* Footer */
 
 .footer-text {
@@ -182,6 +171,14 @@ input[type="range"]::-webkit-slider-thumb {
 .logo-bw {
     width: 9rem;
     margin-left: 30%;
+}
+
+.tips_inactive {
+    display: none;
+}
+
+.tips_active {
+    display: block;
 }
 
 @media screen and (min-width: 767px) {
@@ -234,8 +231,7 @@ input[type="range"]::-webkit-slider-thumb {
     }
 
     .text-2 {
-        margin-bottom: 5rem;
+        margin-top: -49%;
     }
-
 
 }
